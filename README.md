@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+List of Ingredients
+This repo serves as a companion to the tutorial A Rock Solid, Modern Web Stack—Rails 5 API + ActiveAdmin + Create React App on Heroku.
 
-Things you may want to cover:
+A screenshot of the app in action
 
-* Ruby version
+Getting started
+git clone https://github.com/heroku/list-of-ingredients.git
+cd list-of-ingredients
+bundle
+yarn --cwd client install
+bin/rake db:migrate db:seed start
+Once you're ready to deploy to Heroku, run:
 
-* System dependencies
+heroku apps:create
+heroku buildpacks:add heroku/nodejs --index 1
+heroku buildpacks:add heroku/ruby --index 2
+git push heroku master
+heroku run rake db:seed
+heroku open
+Or you can click this button to deploy straight to Heroku from this repository:
 
-* Configuration
+Deploy
 
-* Database creation
+Success!
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Suggestions, problems, typos?
+Get in touch by adding an issue.
